@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "92c78a3b-bd04-4b9e-ab86-e70c55ed3138",
+		"name": "alzion-assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39622722"
+	},
+	"item": [
+		{
+			"name": "Upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/G:/Nitesh Documents/Resume/NiteshResume_Java_3YOE.pdf"
+						},
+						{
+							"key": "passcode",
+							"value": "nitesh",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://13.235.83.1:8080/files/upload/local-storage",
+					"protocol": "http",
+					"host": [
+						"13",
+						"235",
+						"83",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"files",
+						"upload",
+						"local-storage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Download",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://13.235.83.1:8080/files/download/local-storage/296b656f-3293-4172-8af8-58dee81d95de.pdf?passcode=nitesh",
+					"protocol": "http",
+					"host": [
+						"13",
+						"235",
+						"83",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"files",
+						"download",
+						"local-storage",
+						"296b656f-3293-4172-8af8-58dee81d95de.pdf"
+					],
+					"query": [
+						{
+							"key": "passcode",
+							"value": "nitesh"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
